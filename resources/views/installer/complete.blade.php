@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>نصب کامل شد</title>
+<style>body{font-family:Tahoma,Arial;background:#f6f4fb;padding:24px;color:#242033}.box{max-width:620px;margin:60px auto;background:#fff;padding:32px;border-radius:20px;text-align:center}.ok{color:#16804b;font-size:48px}a{display:inline-block;background:#6639b8;color:#fff;padding:13px 24px;border-radius:10px;text-decoration:none;margin-top:15px}</style></head>
+<body><main class="box"><div class="ok">✓</div><h1>نصب اولیه بازارگاه انجام شد</h1><p>حساب مدیر اصلی با ایمیل زیر ساخته شد:</p><strong>{{ $adminEmail }}</strong><p>برای امنیت، مطمئن شوید HTTPS فعال است و APP_DEBUG خاموش مانده است. نصب‌کننده با قفل نصب غیرفعال شده است.</p><a href="{{ route('storefront.home') }}">رفتن به سایت</a></main></body></html>
