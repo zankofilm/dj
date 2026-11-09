@@ -1,0 +1,161 @@
+{
+  "name": "Marketplace Foundation",
+  "version": "1.0.0-beta.40",
+  "milestone": "Shared Hosting Release Pipeline Hardening (PHP 8.5, root ZIP layout, env template preservation)",
+  "status": "build source; final installable artifact requires successful GitHub Actions build and verification",
+  "deployment_target": "Linux shared hosting without SSH or Terminal",
+  "installer": {
+    "root_entry": "/setup.php",
+    "public_entry": "/setup.php",
+    "language": "fa",
+    "browser_only": true,
+    "requires_vendor": true
+  },
+  "locales": [
+    "fa",
+    "ku",
+    "en"
+  ],
+  "homepage": {
+    "banner_source": "database",
+    "banner_admin": "/admin/banners",
+    "max_active_slides": 8,
+    "banner_features": [
+      "image",
+      "localized_text",
+      "target_url",
+      "sort_order",
+      "schedule",
+      "audit_log"
+    ],
+    "shelf_admin": "/admin/homepage-shelves",
+    "shelf_features": [
+      "enable_disable",
+      "localized_titles_fa_ku_en",
+      "sort_order",
+      "item_limit_4_to_24",
+      "latest_shelf_motion_speed"
+    ],
+    "revision_admin": "/admin/homepage-revisions",
+    "revision_features": [
+      "snapshot_shelves",
+      "snapshot_appearance",
+      "snapshot_banners",
+      "admin_preview",
+      "confirmed_publish",
+      "published_revision_history",
+      "rollback_by_republish"
+    ],
+    "merchandising_admin": "/admin/homepage-merchandising",
+    "featured_limits": {
+      "categories": 12,
+      "products": 12
+    },
+    "revision_snapshot_includes": [
+      "featured_categories",
+      "featured_products",
+      "shelves",
+      "appearance",
+      "banners"
+    ]
+  },
+  "site_appearance": {
+    "admin": "/admin/appearance",
+    "locales": [
+      "fa",
+      "ku",
+      "en"
+    ],
+    "features": [
+      "brand_name",
+      "logo_upload",
+      "announcement_bar",
+      "footer_tagline",
+      "footer_copyright",
+      "contact_details",
+      "social_links",
+      "audit_log"
+    ]
+  },
+  "storefront_shared_layout": [
+    "home",
+    "category",
+    "product",
+    "cart",
+    "checkout"
+  ],
+  "static_pages": {
+    "admin": "/admin/pages",
+    "public": "/pages/{slug}",
+    "locales": [
+      "fa",
+      "ku",
+      "en"
+    ],
+    "statuses": [
+      "draft",
+      "published"
+    ],
+    "block_builder": {
+      "max_blocks": 8,
+      "types": [
+        "heading",
+        "paragraph",
+        "notice"
+      ],
+      "locales": [
+        "fa",
+        "ku",
+        "en"
+      ],
+      "safe_text_only": true,
+      "schema_version": 1
+    }
+  },
+  "navigation": {
+    "header_limit": 5,
+    "footer_limit": 8,
+    "locales": [
+      "fa",
+      "ku",
+      "en"
+    ],
+    "external_scheme": "https-only",
+    "internal_path_only": true
+  },
+  "customer_account": {
+    "routes": [
+      "/login",
+      "/register",
+      "/logout",
+      "/account",
+      "/account/orders/{publicId}"
+    ],
+    "order_history_page_size": 10,
+    "email_verification": false,
+    "password_reset_ui": false
+  },
+  "customer_auth": {
+    "registration": "mobile-otp-before-account-creation",
+    "phone_column": "users.phone",
+    "verification_column": "users.phone_verified_at",
+    "otp_table": "sms_verification_codes",
+    "otp_length": 6,
+    "otp_ttl_seconds": 300,
+    "resend_cooldown_seconds": 60,
+    "max_attempts": 5,
+    "max_sends_per_hour": 5,
+    "login_identifiers": [
+      "phone",
+      "legacy-email"
+    ],
+    "sms_drivers": [
+      "kavenegar",
+      "https-json-bearer",
+      "development-log"
+    ],
+    "default_sms_driver": "kavenegar",
+    "international_sms": "custom-https-provider-required",
+    "account_enumeration_protection": true
+  }
+}
